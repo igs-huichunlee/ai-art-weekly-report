@@ -26,11 +26,13 @@
       </div>
     </header>
 
-    <!-- 週次選擇 Tabs 切換器 -->
+    <!-- 週次選擇下拉選單 -->
     <div class="issue-tab-bar">
-      <span class="tab-label">週報歷史期數切換：</span>
-      <button class="issue-tab active" onclick="switchIssue('issue-02')">🌟 Issue #02 (2026.09.08 最新期)</button>
-      <button class="issue-tab" onclick="switchIssue('issue-01')">📜 Issue #01 (2026.08.26 歷史紀錄)</button>
+      <label for="issueSelect" class="tab-label">週報期數：</label>
+      <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
+        <option value="issue-02" selected>Issue #02 (2026.09.08)</option>
+        <option value="issue-01">Issue #01 (2026.08.26)</option>
+      </select>
     </div>
 
     <!-- ======================================================================= -->
@@ -428,16 +430,12 @@
 
   </div>
 
-  <!-- 切換 Issue 頁籤輕量邏輯 -->
+  <!-- 切換 Issue 下拉選單邏輯 -->
   <script>
-    function switchIssue(issueId) {
+    function switchIssueDropdown(issueId) {
       document.querySelectorAll('.issue-content-panel').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.issue-tab').forEach(el => el.classList.remove('active'));
-
       const targetPanel = document.getElementById(issueId);
       if (targetPanel) targetPanel.classList.add('active');
-
-      event.currentTarget.classList.add('active');
     }
   </script>
 
