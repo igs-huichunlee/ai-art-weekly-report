@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卡帕西 LLMwiki 知識庫與部門 SKILLS 盤點系統 (大字版)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    .slide {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .modal-backdrop {
+      display: none;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)] antialiased min-h-screen flex flex-col font-sans text-base">
+
+  <!-- TOP GLOBAL HEADER / NAVIGATION -->
+  <header class="border-b border-[var(--border)] bg-[var(--card)] px-6 py-4 sticky top-0 z-50 shadow-sm flex flex-wrap items-center justify-between gap-4">
+    <!-- Brand / Title -->
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-xl bg-[var(--primary)] text-[var(--primary-foreground)] flex items-center justify-center font-black text-lg">
+        W
+      </div>
+      <div>
+        <h1 class="text-lg sm:text-xl font-black text-[var(--foreground)] leading-tight">卡帕西 LLMwiki 知識管理與技術盤點</h1>
+        <p class="text-xs sm:text-sm text-[var(--muted-foreground)] hidden sm:block">Department Tech & SKILLS Inventory Platform (大字簡報版)</p>
+      </div>
+    </div>
+
+    <!-- Main Navigation Tabs -->
+    <nav class="flex space-x-2 bg-[var(--background)] p-1.5 rounded-xl border border-[var(--border)]">
+      <button onclick="switchTab('presentation')" id="nav-tab-presentation" class="px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition bg-[var(--card)] text-[var(--foreground)] shadow-xs">
+        📢 簡報推廣 (Presentation)
+      </button>
+      <button onclick="switchTab('inventory')" id="nav-tab-inventory" class="px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition text-[var(--muted-foreground)] hover:text-[var(--foreground)]">
+        🛠️ 部門 SKILLS & 工具盤點 (Inventory)
+      </button>
+    </nav>
+
+    <!-- Top Right Actions -->
+    <div class="flex items-center space-x-2">
+      <span class="inline-flex items-center space-x-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>知識庫連線中 (Obsidian Vault)</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- TAB 1: PRESENTATION SLIDES -->
+  <div id="tab-presentation" class="tab-content active flex-1 flex flex-col justify-between max-w-6xl w-full mx-auto p-4 sm:p-8">
+    
+    <!-- Slide Header & Dots -->
+    <div class="flex items-center justify-between mb-4 pb-3 border-b border-[var(--border)]">
+      <span id="slide-category-badge" class="text-sm sm:text-base font-extrabold text-[var(--accent)] uppercase tracking-wider"></span>
+      <div class="flex items-center space-x-4">
+        <div id="slide-dots" class="flex space-x-2"></div>
+        <span id="slide-counter" class="text-sm sm:text-base font-bold text-[var(--muted-foreground)]">1 / 4</span>
+      </div>
+    </div>
+
+    <!-- SLIDE CONTAINER -->
+    <main class="flex-1 flex flex-col justify-center min-h-[480px]">
+
+      <!-- SLIDE 1: COVER -->
+      <section class="slide active flex-col justify-center items-center text-center space-y-8 py-10">
+        <div class="inline-flex items-center space-x-2 bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20 px-5 py-2 rounded-full text-sm sm:text-base font-bold">
+          <span>🚀 團隊知識管理與 AI Agent 協作新時代</span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-[var(--foreground)] max-w-4xl leading-tight">
+          卡帕西 LLMwiki 知識庫
+        </h1>
+        <p class="text-xl sm:text-2xl text-[var(--muted-foreground)] max-w-3xl font-medium leading-relaxed">
+          打造 AI Agent 驅動的團隊第二大腦 (Second Brain) 與高效工作流
+        </p>
+        
+        <div class="pt-6 border-t border-[var(--border)] w-full max-w-md flex justify-center items-center space-x-6 text-base sm:text-lg text-[var(--muted-foreground)]">
+          <div><strong class="text-[var(--foreground)] font-bold">單位：</strong> 線上研二3D美術組</div>
+        </div>
+
+        <div class="pt-4 flex items-center space-x-5">
+          <button onclick="nextSlide()" class="inline-flex items-center space-x-3 bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-md">
+            <span>開始瀏覽簡報</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          <button onclick="switchTab('inventory')" class="inline-flex items-center space-x-3 bg-[var(--card)] border border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--accent)]/10 px-6 py-4 rounded-xl font-bold text-base sm:text-lg transition shadow-xs">
+            <span>查看部門 SKILLS 盤點表</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: CORE CONCEPTS -->
+      <section class="slide flex-col space-y-6">
+        <div class="border-b border-[var(--border)] pb-3">
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-black text-[var(--accent)] uppercase tracking-wider">01. 概念與工具</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-[var(--foreground)] mt-1">核心工具與概念介紹</h2>
+          
+          <div class="mt-3 inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 px-4 py-2 rounded-xl text-base sm:text-lg font-black text-amber-600 dark:text-amber-400 shadow-xs">
+            <span>💡 一句話總結：「一個叫卡帕西的人建立AI圖書館的方式」</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-7 grid grid-cols-1 gap-4">
+            <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm flex items-start space-x-4 hover:border-amber-500/50 transition">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center font-black text-2xl shrink-0 mt-0.5">🧠</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-1.5">
+                  <h3 class="text-lg sm:text-xl font-black text-[var(--foreground)]">卡帕西 (Andrej Karpathy)</h3>
+                  <span class="bg-amber-500 text-slate-950 font-black text-sm px-3 py-1 rounded-md inline-block shadow-xs">👤 「一個人」</span>
+                </div>
+                <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed font-normal">
+                  前 OpenAI 創辦成員、Tesla AI 總監。提出將 LLM 視為作業系統 (LLM OS) 的構想——大模型是 CPU，而知識庫與 SKILLS 則是記憶體與周邊裝備。
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm flex items-start space-x-4 hover:border-amber-500/50 transition">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-black text-2xl shrink-0 mt-0.5">📚</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-1.5">
+                  <h3 class="text-lg sm:text-xl font-black text-[var(--foreground)]">LLMwiki</h3>
+                  <span class="bg-amber-500 text-slate-950 font-black text-sm px-3 py-1 rounded-md inline-block shadow-xs">📖 「AI圖書館」</span>
+                </div>
+                <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed font-normal">
+                  專為 AI 與 Agent 設計的 Wiki 知識庫架構。將團隊 SOP、經驗規範與 Prompt 模組化，讓 AI 能快速精準地檢索與讀取上下文。
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm flex items-start space-x-4 hover:border-amber-500/50 transition">
+              <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center font-black text-2xl shrink-0 mt-0.5">💎</div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-1.5">
+                  <h3 class="text-lg sm:text-xl font-black text-[var(--foreground)]">Obsidian</h3>
+                  <span class="bg-amber-500 text-slate-950 font-black text-sm px-3 py-1 rounded-md inline-block shadow-xs">📝 「記事本」</span>
+                </div>
+                <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed font-normal">
+                  基於純 Markdown 檔案的雙向鏈結知識管理工具。資料完全自主可控，完美支援 Git 版本控制與本地 AI (Claude Code) 串接。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex items-center justify-center">
+            <img src="概念與工具.png" alt="概念與工具" class="max-w-full max-h-[380px] object-contain">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: VALUE & GOALS -->
+      <section class="slide flex-col space-y-6">
+        <div class="border-b border-[var(--border)] pb-3">
+          <span class="text-sm font-black text-[var(--accent)] uppercase tracking-wider">02. 價值與目標</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-[var(--foreground)] mt-1">可以幫助我們什麼？目標是什麼？</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-7 shadow-sm space-y-5">
+            <h3 class="text-xl sm:text-2xl font-black text-[var(--foreground)] flex items-center space-x-3">
+              <span class="text-yellow-500">💡</span>
+              <span>可以幫助我們什麼？</span>
+            </h3>
+            <ul class="space-y-4 text-base sm:text-lg text-[var(--muted-foreground)]">
+              <li class="flex items-start space-x-3">
+                <span class="text-[var(--accent)] font-black text-xl">•</span>
+                <span><strong>打破知識孤島：</strong> 資源集中歸檔，知識全員共享。</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-[var(--accent)] font-black text-xl">•</span>
+                <span><strong>賦能 AI 助理：</strong> 提供Agent團隊脈絡與背景知識，解決記憶缺陷。</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-[var(--accent)] font-black text-xl">•</span>
+                <span><strong>極致提升效率：</strong> 實現一句話產出，節省重複試錯的時間與Token消耗。</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-[var(--accent)]/5 border border-[var(--accent)]/30 rounded-2xl p-7 shadow-sm space-y-5">
+            <h3 class="text-xl sm:text-2xl font-black text-[var(--accent)] flex items-center space-x-3">
+              <span>🎯</span>
+              <span>我們的團隊目標</span>
+            </h3>
+            <ul class="space-y-4 text-base sm:text-lg text-[var(--foreground)]">
+              <li class="flex items-start space-x-3">
+                <span class="text-emerald-500 font-black text-xl">✔</span>
+                <span><strong>建立標準化知識庫：</strong> 將團隊常用工作流程模組化，知識資產可持續累積。</span>
+              </li>
+
+              <li class="flex items-start space-x-3">
+                <span class="text-emerald-500 font-black text-xl">✔</span>
+                <span><strong>普及 Agentic 工作流：</strong> 全員熟練掌握 LLMwiki + Obsidian + Claude Code 組合技。</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: ROADMAP -->
+      <section class="slide flex-col space-y-6">
+        <div class="border-b border-[var(--border)] pb-3">
+          <span class="text-sm font-black text-[var(--accent)] uppercase tracking-wider">03. 執行計畫</span>
+          <h2 class="text-3xl sm:text-5xl font-black text-[var(--foreground)] mt-1">我們該怎麼做？ (執行藍圖)</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-blue-500"></div>
+            <div>
+              <span class="inline-block bg-blue-500/10 text-blue-500 text-sm font-black px-3 py-1 rounded-lg mb-4">Step 01</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-[var(--foreground)] mb-3">知識庫架構重構</h3>
+              <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed">
+                兔兔與威遠合作重構現行知識庫架構與目錄分類。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-emerald-500"></div>
+            <div>
+              <span class="inline-block bg-emerald-500/10 text-emerald-500 text-sm font-black px-3 py-1 rounded-lg mb-4">Step 02</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-[var(--foreground)] mb-3">SKILL 與工具上架</h3>
+              <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed">
+                整理並上架目前現有的 SKILL、Prompt 模版與腳本。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-purple-500"></div>
+            <div>
+              <span class="inline-block bg-purple-500/10 text-purple-500 text-sm font-black px-3 py-1 rounded-lg mb-4">Step 03</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-[var(--foreground)] mb-3">團隊工具準備</h3>
+              <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed">
+                全員下載/更新知識庫，安裝 Obsidian 與 Claude Code。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-amber-500"></div>
+            <div>
+              <span class="inline-block bg-amber-500/10 text-amber-500 text-sm font-black px-3 py-1 rounded-lg mb-4">Step 04</span>
+              <h3 class="text-lg sm:text-xl font-extrabold text-[var(--foreground)] mb-3">落地應用與擴充</h3>
+              <p class="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed">
+                日常工作中實戰應用，持續維護與擴充知識庫內容。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SLIDE FOOTER -->
+    <footer class="pt-4 border-t border-[var(--border)] flex items-center justify-between mt-auto">
+      <button onclick="prevSlide()" id="prev-btn" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl border border-[var(--border)] text-sm sm:text-base font-bold hover:bg-[var(--accent)]/10 disabled:opacity-40 disabled:cursor-not-allowed transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+        <span>上一頁</span>
+      </button>
+
+      <div class="text-sm text-[var(--muted-foreground)] hidden sm:block font-medium">
+        按鍵盤 <kbd class="px-2 py-1 border border-[var(--border)] rounded-md bg-[var(--background)] font-bold">←</kbd> / <kbd class="px-2 py-1 border border-[var(--border)] rounded-md bg-[var(--background)] font-bold">→</kbd> 翻頁
+      </div>
+
+      <button onclick="nextSlide()" id="next-btn" class="inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-[var(--primary)] text-[var(--primary-foreground)] text-sm sm:text-base font-bold hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed transition">
+        <span>下一頁</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </footer>
+  </div>
+
+
+  <!-- TAB 2: SKILLS & TOOLS INVENTORY -->
+  <div id="tab-inventory" class="tab-content max-w-6xl w-full mx-auto p-4 sm:p-8 flex-1">
+    
+    <!-- STATS OVERVIEW CARDS -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-5 mb-8">
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
+        <span class="text-sm font-bold text-[var(--muted-foreground)]">已上架 SKILL 總數</span>
+        <div class="text-3xl sm:text-4xl font-black text-[var(--foreground)] mt-1">4 項</div>
+        <span class="text-sm text-emerald-500 font-bold mt-1 inline-block">↑ 持續增加中</span>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
+        <span class="text-sm font-bold text-[var(--muted-foreground)]">核心工具與軟體</span>
+        <div class="text-3xl sm:text-4xl font-black text-[var(--accent)] mt-1">2 項</div>
+        <span class="text-sm text-[var(--muted-foreground)] mt-1 inline-block font-medium">Obsidian, Claude Code</span>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
+        <span class="text-sm font-bold text-[var(--muted-foreground)]">主要製作者</span>
+        <div class="text-3xl sm:text-4xl font-black text-[var(--foreground)] mt-1">2 人</div>
+        <span class="text-sm text-blue-500 font-bold mt-1 inline-block">兔兔 & 威遠</span>
+      </div>
+
+      <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm">
+        <span class="text-sm font-bold text-[var(--muted-foreground)]">知識庫 .MD 檔連結</span>
+        <div class="text-3xl sm:text-4xl font-black text-emerald-500 mt-1">100%</div>
+        <span class="text-sm text-[var(--muted-foreground)] mt-1 inline-block font-medium">Markdown Vault Ready</span>
+      </div>
+    </div>
+
+    <!-- FILTER & SEARCH CONTROL BAR -->
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl p-5 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-4">
+      <!-- Search Input -->
+      <div class="relative flex-1 min-w-[280px]">
+        <svg class="w-5 h-5 absolute left-3.5 top-3.5 text-[var(--muted-foreground)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" id="inventory-search" oninput="filterInventory()" placeholder="搜尋項目名稱、製作者、設計目的、功能說明或 .MD 檔名..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded-xl pl-11 pr-4 py-2.5 text-sm text-[var(--foreground)] placeholder-[var(--muted-foreground)] focus:outline-none focus:border-[var(--accent)] font-medium">
+      </div>
+
+      <!-- Filter Categories Buttons -->
+      <div class="flex items-center space-x-2 overflow-x-auto pb-1 sm:pb-0" id="filter-badges">
+        <button onclick="setFilterCategory('all')" class="filter-btn active px-4 py-2 rounded-xl text-sm font-bold bg-[var(--primary)] text-[var(--primary-foreground)]">全部項目</button>
+        <button onclick="setFilterCategory('skill')" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] hover:text-[var(--foreground)]">🤖 AI Agent SKILLs</button>
+        <button onclick="setFilterCategory('tool')" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] hover:text-[var(--foreground)]">🛠️ 核心工具</button>
+        <button onclick="setFilterCategory('automation')" class="filter-btn px-4 py-2 rounded-xl text-sm font-bold bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] hover:text-[var(--foreground)]">📊 自動化與報表</button>
+      </div>
+    </div>
+
+    <!-- INVENTORY CARDS GRID -->
+    <div id="inventory-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Cards rendered dynamically via JS -->
+    </div>
+  </div>
+
+
+  <!-- DETAIL MODAL FOR MD & FULL DETAILS -->
+  <div id="detail-modal" class="modal-backdrop fixed inset-0 z-50 bg-black/60 backdrop-blur-xs items-center justify-center p-4">
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <!-- Modal Header -->
+      <div class="px-6 py-5 border-b border-[var(--border)] flex items-center justify-between bg-[var(--background)]">
+        <div class="flex items-center space-x-3">
+          <span id="modal-category-badge" class="text-sm font-black px-3 py-1 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)]"></span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black text-[var(--foreground)]"></h3>
+        </div>
+        <button onclick="closeModal()" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] p-1.5 rounded-xl hover:bg-[var(--accent)]/10 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (6 Fields Display) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm sm:text-base">
+        
+        <!-- Field 1 & 2: Name & Creator -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4 border-b border-[var(--border)]">
+          <div>
+            <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">1. 項目名稱</span>
+            <p id="modal-field-name" class="font-extrabold text-[var(--foreground)] text-lg mt-1"></p>
+          </div>
+          <div>
+            <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">2. 製作者 / 負責人</span>
+            <p id="modal-field-creator" class="font-extrabold text-[var(--accent)] text-lg mt-1"></p>
+          </div>
+        </div>
+
+        <!-- Field 3: Purpose -->
+        <div>
+          <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">3. 設計目的</span>
+          <p id="modal-field-purpose" class="text-[var(--foreground)] mt-1.5 leading-relaxed bg-[var(--background)] p-4 rounded-xl border border-[var(--border)] font-medium"></p>
+        </div>
+
+        <!-- Field 4: Features -->
+        <div>
+          <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">4. 功能說明</span>
+          <p id="modal-field-features" class="text-[var(--foreground)] mt-1.5 leading-relaxed bg-[var(--background)] p-4 rounded-xl border border-[var(--border)] whitespace-pre-line font-medium"></p>
+        </div>
+
+        <!-- Field 5: Demo / Output -->
+        <div>
+          <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">5. 操作與產出展示</span>
+          <div id="modal-field-demo" class="mt-1.5 p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/5 text-[var(--foreground)] font-mono text-sm sm:text-base whitespace-pre-line"></div>
+        </div>
+
+        <!-- Field 6: MD File Path & Preview -->
+        <div>
+          <span class="text-xs font-black text-[var(--muted-foreground)] uppercase">6. 詳細說明文件 (.MD 檔)</span>
+          <div class="mt-1.5 bg-slate-900 text-slate-100 p-5 rounded-xl font-mono text-sm overflow-x-auto space-y-3">
+            <div class="flex items-center justify-between text-slate-400 pb-2.5 border-b border-slate-700">
+              <span id="modal-field-mdpath" class="font-bold"></span>
+              <span class="bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md text-xs font-bold">Obsidian Markdown</span>
+            </div>
+            <pre id="modal-field-mdpreview" class="text-slate-200 leading-relaxed font-sans whitespace-pre-wrap mt-2"></pre>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 border-t border-[var(--border)] bg-[var(--background)] flex justify-end">
+        <button onclick="closeModal()" class="px-6 py-2.5 bg-[var(--primary)] text-[var(--primary-foreground)] rounded-xl text-sm font-bold hover:opacity-90 transition">
+          關閉視窗 (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // SLIDE DATA & NAVIGATION LOGIC
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const slideCounter = document.getElementById('slide-counter');
+    const dotsContainer = document.getElementById('slide-dots');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.className = `w-3 h-3 rounded-full transition ${i === 0 ? 'bg-[var(--primary)]' : 'bg-[var(--border)]'}`;
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateSlides() {
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) slide.classList.add('active');
+        else slide.classList.remove('active');
+      });
+
+      slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach((dot, idx) => {
+        dot.className = idx === currentSlide 
+          ? 'w-3 h-3 rounded-full bg-[var(--primary)] transition' 
+          : 'w-3 h-3 rounded-full bg-[var(--border)] hover:bg-[var(--muted-foreground)] transition';
+      });
+
+      prevBtn.disabled = currentSlide === 0;
+      nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+
+    function nextSlide() { if (currentSlide < totalSlides - 1) { currentSlide++; updateSlides(); } }
+    function prevSlide() { if (currentSlide > 0) { currentSlide--; updateSlides(); } }
+    function goToSlide(idx) { if (idx >= 0 && idx < totalSlides) { currentSlide = idx; updateSlides(); } }
+
+    // TAB SWITCHER LOGIC
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.getElementById(`tab-${tabId}`).classList.add('active');
+
+      const btnPres = document.getElementById('nav-tab-presentation');
+      const btnInv = document.getElementById('nav-tab-inventory');
+
+      if (tabId === 'presentation') {
+        btnPres.className = "px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition bg-[var(--card)] text-[var(--foreground)] shadow-xs";
+        btnInv.className = "px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition text-[var(--muted-foreground)] hover:text-[var(--foreground)]";
+      } else {
+        btnInv.className = "px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition bg-[var(--card)] text-[var(--foreground)] shadow-xs";
+        btnPres.className = "px-5 py-2 rounded-lg text-sm sm:text-base font-bold transition text-[var(--muted-foreground)] hover:text-[var(--foreground)]";
+      }
+    }
+
+    // SKILLS & TOOLS INVENTORY DATA (6 FIELDS STRICTLY IMPLEMENTED)
+    const inventoryData = [
+      {
+        id: "skill-folder-structure",
+        type: "skill",
+        category: "🤖 AI Agent SKILL",
+        name: "Folder Structure SOP (3D專案目錄規範與歸檔)",
+        creator: "兔兔",
+        purpose: "規範 3D 專案檔案結構，解決外包回檔混亂與版本控管問題，實現自動化檔案檢核與目錄歸檔。",
+        features: "• 自動掃描與檢查專案目錄是否符合 SOP V1.0\n• 外包回檔一鍵整理與重命名處理\n• 版本歷程記錄與過期檔案自動打包封存\n• 引導團隊成員完成標準歸檔流程",
+        demo: "▶ 操作：在 Terminal 輸入 `claude run folder_structure_sop` 或自然語言指令「幫我歸檔 3D 專案」\n▶ 產出：生成 `audit_report.json` 與修復後的規範化目錄結構（含 `.agents/skills/...`）",
+        mdPath: ".agents/skills/folder_structure_sop/SKILL.md",
+        mdPreview: `# Folder Structure SOP (V1.0)\n\n## 目的\n本規範旨在統一部門 3D 專案之目錄結構與外包回檔處理流程。\n\n## 目錄架構規範\n- /01_Assets (模型與貼圖原檔)\n- /02_Renders (渲染圖與影片產出)\n- /03_Outsource (外包廠商回檔專區)\n- /04_Archives (歷史備份封存)`
+      },
+      {
+        id: "skill-review-generator",
+        type: "automation",
+        category: "📊 自動化與報表",
+        name: "Monthly & Annual Review Generator (復盤儀表板生成器)",
+        creator: "威遠",
+        purpose: "自動解析團隊工作日誌與統計數據，更新月度與年度復盤儀表板，減少手動統計時間。",
+        features: "• 自動抓取工作日誌 (.md) 與 Git 提交數據\n• 自動加總與計算 KPI / OKR 完成百分比\n• 支援多月份頁籤 HTML 儀表板動態渲染\n• 生成年度總結圖表與 KPI 報告",
+        demo: "▶ 操作：執行 `python generate_review.py --month 2026-08`\n▶ 產出：生成互動式 `monthly-review.html` 網頁儀表板，支援頁籤切換與圖表加總",
+        mdPath: ".agents/skills/monthly-annual-review-generator/SKILL.md",
+        mdPreview: `# Monthly & Annual Review Generator\n\n## 簡介\n自動解析工作日誌與統計數據，更新 monthly-review 月度/年度復盤儀表板。\n\n## 使用方式\n輸入指令後自動計算當月貢獻度與項目完成進度。`
+      },
+      {
+        id: "skill-generative-ui",
+        type: "skill",
+        category: "🤖 AI Agent SKILL",
+        name: "Generative UI System (廣義互動式 UI 渲染)",
+        creator: "兔兔 & 威遠",
+        purpose: "讓 AI Agent 能在對話視窗與獨立視窗中即時生成高互動性 HTML、圖表、簡報與儀表板。",
+        features: "• 支援對話框內嵌入輕量 `<agent-embed>` 互動元件\n• 整合 Tailwind CSS 與動態 Theme 設計系統\n• 實現數據視覺化 (Charts, Timelines, Slide Decks)\n• 提供無縫自適應深淺色主題切換",
+        demo: "▶ 操作：AI Agent 呼叫 `write_to_file` 建立 HTML 檔案並加入 `<agent-embed>`\n▶ 產出：即時在聊天 UI 中渲染可互動之 Dashboard、Widget 或簡報",
+        mdPath: ".builtin/skills/generative_ui/SKILL.md",
+        mdPreview: `# Generative UI Skill\n\n## Overview\nHow to render rich interactive HTML widgets inline in the chat or as standalone artifacts.\n\n## Design Rules\n- Use theme CSS variables (--background, --foreground, --card, --border)\n- Tailwind CSS support included.`
+      },
+      {
+        id: "tool-obsidian",
+        type: "tool",
+        category: "🛠️ 核心工具",
+        name: "Obsidian Vault (團隊第二大腦知識庫)",
+        creator: "團隊全員 (兔兔 & 威遠 主導重構)",
+        purpose: "作為部門核心知識庫，集中存放在專案經驗、SOP 規範與 Agent SKILLs，實現知識可持續累積。",
+        features: "• 全 Markdown 純文字格式，高自主可控與備份安全\n• 強大雙向連結 (Wikilinks \`[[Link]]\`) 與圖譜視覺化\n• 與 Git 版本庫完全同步\n• 作為 Local AI Agent (Claude Code) 讀取的Context來源",
+        demo: "▶ 操作：開啟 Obsidian 軟體，點選左側目錄或圖譜檢視 (Graph View)\n▶ 產出：視覺化網狀知識關聯圖，點擊雙向連結即可跨文章跳轉Context",
+        mdPath: "LLMwiki_Vault/README.md",
+        mdPreview: `# 團隊 LLMwiki Obsidian 知識庫主頁\n\n歡迎使用團隊第二大腦知識庫！\n\n## 熱門目錄\n- [[01_SKILLS庫]]\n- [[02_專案SOP]]\n- [[03_AI協作指南]]`
+      },
+      {
+        id: "tool-claude-code",
+        type: "tool",
+        category: "🛠️ 核心工具",
+        name: "Claude Code CLI (Command Line AI Agent)",
+        creator: "團隊全員",
+        purpose: "引進工程級 CLI AI 助理，讓 AI 能直接存取本地 SKILL 庫與專案程式碼，自動化執行開發與維護。",
+        features: "• 原生支援本地檔案讀寫、Terminal 指令執行與 Git 操縱\n• 自動調用 `.agents/skills/` 中定義的 SKILLs\n• 支援自動化單元測試與程式碼重構\n• 極高傳輸效率與脈絡檢索速度",
+        demo: "▶ 操作：在 Terminal 輸入 `claude` 並輸入「請幫我盤點目前庫裡有哪些 SKILL」\n▶ 產出：AI 自動掃描目錄並呼叫 SKILL 輸出回應與修改結果",
+        mdPath: "~/.claude/skills/README.md",
+        mdPreview: `# Claude Code Agent Configuration\n\n## Local Skill Directory\nAll skills loaded from workspace .agents/skills/ directory.`
+      },
+      {
+        id: "skill-customizations",
+        type: "skill",
+        category: "🤖 AI Agent SKILL",
+        name: "AGY Customization System (客製化擴充規範)",
+        creator: "威遠",
+        purpose: "規範客製化 Rules、Plugins、Hooks 與 MCP Servers 的加載優先序與擴充機制。",
+        features: "• 定義 Rule / Skill / Plugin 之優先層級\n• 支援 Model Context Protocol (MCP) 外掛擴充\n• 自動檢索環境變數與自訂設定",
+        demo: "▶ 操作：在 `.gemini/` 或專案根目錄配置 `AGY_RULES.md`\n▶ 產出：AI 啟動時自動載入專屬 Rule 與邊界約束",
+        mdPath: ".builtin/skills/agy-customizations/SKILL.md",
+        mdPreview: `# AGY Customizations Guide\n\nComprehensive guide and reference for the Customization System (Skills, Rules, Plugins, Hooks).`
+      }
+    ];
+
+    let currentFilterCategory = 'all';
+
+    function setFilterCategory(category) {
+      currentFilterCategory = category;
+      document.querySelectorAll('#filter-badges button').forEach(btn => {
+        btn.className = "px-4 py-2 rounded-xl text-sm font-bold bg-[var(--background)] text-[var(--muted-foreground)] border border-[var(--border)] hover:text-[var(--foreground)]";
+      });
+      event.target.className = "px-4 py-2 rounded-xl text-sm font-bold bg-[var(--primary)] text-[var(--primary-foreground)]";
+      filterInventory();
+    }
+
+    function filterInventory() {
+      const searchTerm = document.getElementById('inventory-search').value.toLowerCase();
+      const grid = document.getElementById('inventory-grid');
+      grid.innerHTML = '';
+
+      const filtered = inventoryData.filter(item => {
+        const matchCategory = currentFilterCategory === 'all' || item.type === currentFilterCategory;
+        const matchSearch = item.name.toLowerCase().includes(searchTerm) || 
+                            item.creator.toLowerCase().includes(searchTerm) || 
+                            item.purpose.toLowerCase().includes(searchTerm) ||
+                            item.features.toLowerCase().includes(searchTerm) ||
+                            item.mdPath.toLowerCase().includes(searchTerm);
+        return matchCategory && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-[var(--card)] border border-[var(--border)] rounded-2xl">
+            <p class="text-base text-[var(--muted-foreground)] font-bold">🔍 未找到符合條件的 SKILL 或工具項目</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = "bg-[var(--card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:border-[var(--accent)] transition flex flex-col justify-between space-y-4";
+        
+        card.innerHTML = `
+          <div class="space-y-4">
+            <!-- Badge & Creator -->
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-black px-3 py-1 rounded-lg bg-[var(--accent)]/10 text-[var(--accent)]">${item.category}</span>
+              <span class="text-sm font-bold text-[var(--muted-foreground)]">製作者：<strong class="text-[var(--foreground)] font-extrabold">${item.creator}</strong></span>
+            </div>
+            
+            <!-- 1. Name -->
+            <div>
+              <h3 class="text-lg sm:text-xl font-black text-[var(--foreground)] leading-snug">${item.name}</h3>
+              <p class="text-sm text-[var(--muted-foreground)] font-mono mt-1 overflow-hidden text-ellipsis whitespace-nowrap" title="${item.mdPath}">
+                📄 6. MD檔：<span class="text-[var(--accent)] underline font-bold">${item.mdPath}</span>
+              </p>
+            </div>
+            
+            <!-- 3. Purpose -->
+            <div class="bg-[var(--background)] p-4 rounded-xl border border-[var(--border)]">
+              <span class="text-xs font-black text-[var(--accent)] uppercase block mb-1">3. 設計目的</span>
+              <p class="text-sm sm:text-base text-[var(--foreground)] leading-relaxed font-medium">${item.purpose}</p>
+            </div>
+
+            <!-- 4. Features snippet -->
+            <div>
+              <span class="text-xs font-black text-[var(--muted-foreground)] uppercase block mb-1">4. 主要功能摘要</span>
+              <p class="text-sm text-[var(--muted-foreground)] line-clamp-2 leading-relaxed whitespace-pre-line font-normal">${item.features}</p>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="pt-4 border-t border-[var(--border)] flex items-center justify-between">
+            <button onclick="openModal('${item.id}')" class="w-full bg-[var(--primary)] text-[var(--primary-foreground)] hover:opacity-90 py-3 rounded-xl text-sm font-bold flex items-center justify-center space-x-2 transition shadow-xs">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              <span>檢視完整 6 大欄位與 .MD 檔</span>
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // MODAL OPEN / CLOSE LOGIC
+    function openModal(itemId) {
+      const item = inventoryData.find(d => d.id === itemId);
+      if (!item) return;
+
+      document.getElementById('modal-category-badge').textContent = item.category;
+      document.getElementById('modal-title').textContent = item.name;
+      
+      document.getElementById('modal-field-name').textContent = item.name;
+      document.getElementById('modal-field-creator').textContent = item.creator;
+      document.getElementById('modal-field-purpose').textContent = item.purpose;
+      document.getElementById('modal-field-features').textContent = item.features;
+      document.getElementById('modal-field-demo').textContent = item.demo;
+      
+      document.getElementById('modal-field-mdpath').textContent = item.mdPath;
+      document.getElementById('modal-field-mdpreview').textContent = item.mdPreview;
+
+      document.getElementById('detail-modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('detail-modal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+
+      if (document.getElementById('tab-presentation').classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === 'Space') nextSlide();
+        else if (e.key === 'ArrowLeft') prevSlide();
+      }
+    });
+
+    updateSlides();
+    filterInventory();
+  </script>
+</body>
+</html>
