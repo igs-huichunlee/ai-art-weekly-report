@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI 美術 Agent 週報 (AI Art Weekly Report)</title>
-  <meta name="description" content="AI 美術 Agent 開發與應用每週重點項目報告" />
+  <meta name="description" content="AI 美術 Agent 開發與應用每週重點項目與 AI 技巧分享報告" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -30,40 +30,41 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-02" selected>Issue #02 (2026.09.08)</option>
+        <option value="issue-03" selected>Issue #03 (2026.09.14)</option>
+        <option value="issue-02">Issue #02 (2026.09.08)</option>
         <option value="issue-01">Issue #01 (2026.08.26)</option>
       </select>
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #02 (2026.09.08 本週最新內容) -->
+    <!-- 🌟 ISSUE #03 (2026.09.14 本週最新第 3 次週報) -->
     <!-- ======================================================================= -->
-    <div id="issue-02" class="issue-content-panel active">
+    <div id="issue-03" class="issue-content-panel active">
       
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">
         <div class="hero-meta">
           <div class="issue-selector">
             <span class="issue-label">週別：</span>
-            <span class="issue-badge-text">Issue #02 (2026-W37)</span>
+            <span class="issue-badge-text">Issue #03 (2026-W38)</span>
           </div>
         </div>
 
         <!-- ✏️ 週報主標題 (可直接修改) -->
-        <h2 class="hero-title">AI 美術 Agent 週報 Issue #02 · 多語系工具推進與知識庫重建</h2>
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #03<br />產線工具推進與跨部門 AI 技巧交流</h2>
         
         <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
         <p class="hero-desc">
-          本週聚焦於文字生成工作流多語系自動化、GIT 共享庫與知識庫重建，以及全新「研一老虎機工作流」的發想規劃。
+          本週聚焦於文字生成工作流、GIT 共享庫與研一老虎機工作流三大重點研發項目，並新增 2 項跨部門 AI 技巧與經驗分享。
         </p>
       </section>
 
-      <!-- 本週前三個重點項目區 -->
+      <!-- 研發重點項目列表區 -->
       <main>
         <div class="projects-list">
 
           <!-- =================================================================== -->
-          <!-- ✏️ Issue #02 - 重點項目 1 -->
+          <!-- ✏️ Issue #03 - 重點研發項目 1 -->
           <!-- =================================================================== -->
           <article class="project-card">
             <div class="card-top">
@@ -72,7 +73,7 @@
                 <div>
                   <h3 class="project-title">✍️ 文字生成工作流</h3>
                   <div class="project-badges">
-                    <span class="badge badge-dev">👤 開發者：泰翔/伊恩/小楊/兔兔</span>
+                    <span class="badge badge-dev">👤 開發者：技術服務部</span>
                     <span class="badge cat-ui">2D UI / 多語系</span>
                   </div>
                 </div>
@@ -98,36 +99,35 @@
 • 快速產出與程式原圖一致的散圖</div>
               </div>
 
-              <!-- 🚀 目前狀態 (本週更新) -->
+              <!-- 🚀 目前狀態 -->
               <div class="dim-box dim-status">
                 <div class="dim-title">🚀 目前狀態</div>
-                <div class="dim-content">• 與泰翔/伊恩/小楊協作開發PSD檔自動化多語系工具
-• SKILL與工具打包上架知識庫中</div>
+                <div class="dim-content">• 已接洽技術服務部取得圖生圖工具使用權
+• 洽談PSD檔自動化工具製作</div>
               </div>
 
               <!-- ⚠️ 瓶頸 -->
               <div class="dim-box dim-bottleneck">
                 <div class="dim-title">⚠️ 瓶頸</div>
                 <div class="dim-content">• 約 10~20% 特殊規格需人工調整
-• Agent 可自行操作 PS 改多語系輸出，但過度消耗效能
-• 文字辨識難易度落差大，無法用一套工作流自動完成所有內容</div>
+• 部分文字錯誤只能骰到對為止</div>
               </div>
 
               <!-- 🎯 未來目標 -->
               <div class="dim-box dim-goals">
                 <div class="dim-title">🎯 未來目標</div>
                 <div class="dim-content">• 完善PSD支線
-• 取得網頁組已有的成熟多語系工具(圖生圖)</div>
+• 也可開放給外包使用</div>
               </div>
 
             </div>
 
             <!-- 🎬 成果展示影片 -->
             <div class="media-box-wrapper">
-              <div class="media-header-label">🎬 成果展示影片</div>
+              <div class="media-header-label">🎬 成果展示影片 (文字生成工作流_L3.mp4)</div>
               <div class="media-box">
                 <video controls loop muted playsinline preload="metadata">
-                  <source src="Issue %2302 (2026-W37)/文字生成工作流_02.mp4" type="video/mp4">
+                  <source src="Issue %2303 (2026-W38)/文字生成工作流_L3.mp4" type="video/mp4">
                   您的瀏覽器不支援影片播放。
                 </video>
               </div>
@@ -136,7 +136,7 @@
 
 
           <!-- =================================================================== -->
-          <!-- ✏️ Issue #02 - 重點項目 2 -->
+          <!-- ✏️ Issue #03 - 重點研發項目 2 -->
           <!-- =================================================================== -->
           <article class="project-card">
             <div class="card-top">
@@ -154,9 +154,9 @@
               <!-- 進度條 -->
               <div class="progress-group">
                 <div class="progress-track">
-                  <div class="progress-fill" style="width: 45%;"></div>
+                  <div class="progress-fill" style="width: 70%;"></div>
                 </div>
-                <span class="progress-num">45%</span>
+                <span class="progress-num">70%</span>
               </div>
             </div>
 
@@ -170,7 +170,7 @@
 • 檔案共享</div>
               </div>
 
-              <!-- 🚀 目前狀態 (本週更新) -->
+              <!-- 🚀 目前狀態 -->
               <div class="dim-box dim-status">
                 <div class="dim-title">🚀 目前狀態</div>
                 <div class="dim-content">• 與威遠配合知識庫重建
@@ -184,12 +184,11 @@
 • 類別規範中</div>
               </div>
 
-              <!-- 🎯 未來目標 (本週更新) -->
+              <!-- 🎯 未來目標 -->
               <div class="dim-box dim-goals">
                 <div class="dim-title">🎯 未來目標</div>
                 <div class="dim-content">• 所有同仁上傳AI相關的技術資源
-• 建立完整化使用工作流 > 優化 > 歸檔疊代回知識庫流程
-• 視覺化SKILL與工具盤點表單</div>
+• 建立完整化使用工作流 > 優化 > 歸檔疊代回知識庫流程</div>
               </div>
 
             </div>
@@ -208,7 +207,7 @@
 
 
           <!-- =================================================================== -->
-          <!-- ✏️ Issue #02 - 重點項目 3 (新新增項目) -->
+          <!-- ✏️ Issue #03 - 重點研發項目 3 -->
           <!-- =================================================================== -->
           <article class="project-card">
             <div class="card-top">
@@ -217,7 +216,7 @@
                 <div>
                   <h3 class="project-title">🎰 研一老虎機工作流</h3>
                   <div class="project-badges">
-                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge badge-dev">👤 開發者：兔兔/ㄗㄗ</span>
                     <span class="badge cat-spine">老虎機 / 工作流</span>
                   </div>
                 </div>
@@ -244,8 +243,7 @@
               <!-- 🚀 目前狀態 -->
               <div class="dim-box dim-status">
                 <div class="dim-title">🚀 目前狀態</div>
-                <div class="dim-content">• 蒐集目前既有零散的工作流程
-• 待知識庫架構重新建立後開始實作</div>
+                <div class="dim-content">• 與企劃合作使用codex GPT6 生成2D設計稿</div>
               </div>
 
               <!-- ⚠️ 瓶頸 -->
@@ -262,12 +260,211 @@
 
             </div>
 
-            <!-- 🎬 成果展示 (暫無影片) -->
+            <!-- 🎬 成果展示影片 -->
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示影片 (GPT6Astra_老虎機.mp4)</div>
+              <div class="media-box">
+                <video controls loop muted playsinline preload="metadata">
+                  <source src="Issue %2303 (2026-W38)/GPT6Astra_老虎機.mp4" type="video/mp4">
+                  您的瀏覽器不支援影片播放。
+                </video>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+
+        <!-- =================================================================== -->
+        <!-- 💡 新增區塊：跨部門 AI 技巧與經驗分享 (2 項新技巧) -->
+        <!-- 包含：1.標題 2.使用軟體 3.說明條列 4.範例畫面 -->
+        <!-- =================================================================== -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2">
+            <span>🤝 跨部門 AI 技巧與經驗分享</span>
+          </h2>
+        </section>
+
+        <!-- ✏️ AI 技巧分享 01 -->
+        <article class="sharing-card">
+          <!-- 1. 標題 -->
+          <h3 class="sharing-title">💡 技巧 01：研四－影片生成技巧</h3>
+
+          <!-- 2. 使用軟體 -->
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">Seedance2.0</span>
+            <span class="badge-software">Seedance2.5</span>
+          </div>
+
+          <!-- 3. 說明條列 -->
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">1. 骰四次以上就停止，如果沒出現理想的效果四次以上也很難再有突破
+2. 改方法，可能換提詞或是換圖但不換模型(換模型整個會大改)
+3. Seedance的題詞越精準效果越好，每款AI特性不太一樣，目前最強是Seedance
+4. 雖然很多平台都有Seedance，但是Seedance自己的平台獨有＂全方位參考＂的模式，並且別的平台擁有的都是閹割版的功能
+5. 目前沒有哪個AI比較會寫提詞，比較吃個人經驗
+6. 使用編輯修改影片會讓影片畫質變遭，目前還無解</div>
+          </div>
+
+          <!-- 4. 範例畫面展示 (取消，僅文字展示) -->
+        </article>
+
+
+        <!-- ✏️ AI 技巧分享 02 -->
+        <article class="sharing-card">
+          <!-- 1. 標題 -->
+          <h3 class="sharing-title">💡 技巧 02：GPT6 Astra image2.5</h3>
+
+          <!-- 2. 使用軟體 -->
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">GPT</span>
+            <span class="badge-software">Codex</span>
+          </div>
+
+          <!-- 3. 說明條列 -->
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">1. 3D討論度高,但生成很燒Token而且只擅長做幾何類型,如場景機器人等
+2. Astra + Tripo 3D + Blender為目前討論度較高的AI工作流
+   • 參考 1：<a href="https://x.com/yyyole/status/2098791613946589527" target="_blank" style="color: var(--accent-matcha); text-decoration: underline; font-weight: 700;">https://x.com/yyyole/status/2098791613946589527 ↗</a>
+   • 參考 2：<a href="https://www.tripo3d.ai/3d-prompts#prompt-library" target="_blank" style="color: var(--accent-matcha); text-decoration: underline; font-weight: 700;">https://www.tripo3d.ai/3d-prompts#prompt-library ↗</a>
+3. 老虎機生成換皮綁定度很高</div>
+          </div>
+
+          <!-- 4. 範例畫面展示 (取消，僅文字展示) -->
+        </article>
+
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #02 (2026.09.08 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-02" class="issue-content-panel">
+      
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #02 (2026-W37)</span>
+          </div>
+        </div>
+
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #02 · 多語系工具推進與知識庫重建</h2>
+        <p class="hero-desc">
+          本週聚焦於文字生成工作流多語系自動化、GIT 共享庫與知識庫重建，以及全新「研一老虎機工作流」的發想規劃。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">✍️ 文字生成工作流</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：泰翔/伊恩/小楊/兔兔</span>
+                    <span class="badge cat-ui">2D UI / 多語系</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                <span class="progress-num">80%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 解決錯字與特殊變形無法控制的問題
+• 透過 SKILL 自動化產出多語系圖
+• 快速產出與程式原圖一致的散圖</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 與泰翔/伊恩/小楊協作開發PSD檔自動化多語系工具
+• SKILL與工具打包上架知識庫中</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 約 10~20% 特殊規格需人工調整
+• Agent 可自行操作 PS 改多語系輸出，但過度消耗效能
+• 文字辨識難易度落差大，無法用一套工作流自動完成所有內容</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 完善PSD支線
+• 取得網頁組已有的成熟多語系工具(圖生圖)</div></div>
+            </div>
             <div class="media-box-wrapper">
               <div class="media-header-label">🎬 成果展示影片</div>
-              <div class="no-media-placeholder">
-                ⏳ 項目處於架構規劃初期，展示影片準備中...
+              <div class="media-box"><video controls loop muted playsinline preload="metadata"><source src="Issue %2302 (2026-W37)/文字生成工作流_02.mp4" type="video/mp4"></video></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">🌿 GIT共享庫建立</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：威遠/兔兔</span>
+                    <span class="badge cat-3d">資料庫 / 共享</span>
+                  </div>
+                </div>
               </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 45%;"></div></div>
+                <span class="progress-num">45%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 版本歸檔在公共空間
+• 檔案共享</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 與威遠配合知識庫重建
+• 建立新的知識庫工作規範與流程</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 美術人員在 Git 操作上不熟悉
+• 類別規範中</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 所有同仁上傳AI相關的技術資源
+• 建立完整化使用工作流 > 優化 > 歸檔疊代回知識庫流程
+• 視覺化SKILL與工具盤點表單</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label" style="display: flex; justify-content: space-between; align-items: center;">
+                <span>🌐 成果展示：LLMwiki 推廣與技術盤點系統</span>
+                <a href="Issue %2302 (2026-W37)/LLMwiki/index.html" target="_blank" style="font-size: 0.78rem; color: var(--accent-matcha); text-decoration: underline; font-weight: 700;">🔗 全螢幕開啟網頁 ↗</a>
+              </div>
+              <div class="media-box" style="height: 540px; background: #ffffff;">
+                <iframe src="Issue %2302 (2026-W37)/LLMwiki/index.html" style="width: 100%; height: 100%; border: none; border-radius: 14px; background: #ffffff;"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">🎰 研一老虎機工作流</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge cat-spine">老虎機 / 工作流</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 5%;"></div></div>
+                <span class="progress-num">5%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 加速老虎機開發產線的速度</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 蒐集目前既有零散的工作流程
+• 待知識庫架構重新建立後開始實作</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 尚未正式啟動</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 協作程式/企劃/美術加速產線自動化</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示影片</div>
+              <div class="no-media-placeholder">⏳ 項目處於架構規劃初期，展示影片準備中...</div>
             </div>
           </article>
 
@@ -278,7 +475,7 @@
 
 
     <!-- ======================================================================= -->
-    <!-- 📜 ISSUE #01 (2026.08.26 歷史舊有紀錄) -->
+    <!-- 📜 ISSUE #01 (2026.08.26 歷史紀錄) -->
     <!-- ======================================================================= -->
     <div id="issue-01" class="issue-content-panel">
       
@@ -299,7 +496,6 @@
       <main>
         <div class="projects-list">
 
-          <!-- 歷史項目 1 -->
           <article class="project-card">
             <div class="card-top">
               <div class="card-title-group">
@@ -337,7 +533,6 @@
             </div>
           </article>
 
-          <!-- 歷史項目 2 -->
           <article class="project-card">
             <div class="card-top">
               <div class="card-title-group">
@@ -371,7 +566,6 @@
             </div>
           </article>
 
-          <!-- 歷史項目 3 -->
           <article class="project-card">
             <div class="card-top">
               <div class="card-title-group">
