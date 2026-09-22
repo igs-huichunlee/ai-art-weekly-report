@@ -107,6 +107,95 @@ body {
   gap: 16px;
 }
 
+/* Markdown Viewer & Tabs Styling */
+.md-tab-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.md-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.md-tab:hover {
+  background: rgba(124, 154, 110, 0.15);
+  border-color: rgba(124, 154, 110, 0.4);
+  color: var(--accent-matcha);
+}
+
+.md-tab.active {
+  background: var(--accent-matcha);
+  border-color: var(--accent-matcha);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(124, 154, 110, 0.3);
+}
+
+.md-viewer-panel {
+  display: none;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px 30px;
+  max-height: 520px;
+  overflow-y: auto;
+  color: #1e293b;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.md-viewer-panel.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+.md-viewer-panel h1, .md-viewer-panel h2, .md-viewer-panel h3 {
+  color: #0f172a;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.md-viewer-panel blockquote {
+  background: #f8fafc;
+  border-left: 4px solid #7c9a6e;
+  padding: 10px 16px;
+  margin: 12px 0;
+  color: #475569;
+  border-radius: 0 6px 6px 0;
+}
+
+.md-viewer-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 0.88rem;
+}
+
+.md-viewer-panel th, .md-viewer-panel td {
+  border: 1px solid #cbd5e1;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.md-viewer-panel th {
+  background: #f1f5f9;
+  font-weight: 700;
+  color: #0f172a;
+}
+
 /* AI Skill Sharing Section & Card Styling */
 .sharing-section-title {
   margin-top: 50px;
