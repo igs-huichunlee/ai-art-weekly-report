@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-04" selected>Issue #04 (2026.09.22)</option>
+        <option value="issue-05" selected>Issue #05 (2026.10.20)</option>
+        <option value="issue-04">Issue #04 (2026.09.22)</option>
         <option value="issue-03">Issue #03 (2026.09.14)</option>
         <option value="issue-02">Issue #02 (2026.09.08)</option>
         <option value="issue-01">Issue #01 (2026.08.26)</option>
@@ -38,9 +39,286 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #04 (2026.09.22 本週最新第 4 次週報) -->
+    <!-- 🌟 ISSUE #05 (2026.10.20 本週最新第 5 次週報) -->
     <!-- ======================================================================= -->
-    <div id="issue-04" class="issue-content-panel active">
+    <div id="issue-05" class="issue-content-panel active">
+
+      <!-- 週報標題與總體摘要區 -->
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #05 (2026-W43)</span>
+          </div>
+        </div>
+
+        <!-- ✏️ 週報主標題 (可直接修改) -->
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #05<br />十月知識庫新工具上架</h2>
+
+        <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
+        <p class="hero-desc">
+          本期盤點十月新收進知識庫的 6 項工具與 SKILL：涵蓋新機制 UI 產線、Spine 換皮、Notion 大檔上傳、講白話、Cocos 素材檢查與日備份，並分享 2 支素材延伸類 SKILL。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <!-- ✏️ Issue #05 - 重點項目 1：新機制 UI 產線 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">🧩 新機制 UI 產線</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：侑子</span>
+                    <span class="badge cat-ui">2D UI / 產線</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 70%;"></div></div>
+                <span class="progress-num">70%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 滿貫大亨每個新活動機制都要從頭排版、切圖、命名
+• 企劃、美術、程式三方來回對版本耗時</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 已跑完「限時免單」「友福同享」兩個機制
+• 企劃開案 → HTML 示範頁 → Figma → 切圖命名 → 交給程式，整條串好
+• 附起手模板、Figma 外掛、切圖改名與字型檢查工具
+• 美術版 HTML＋Figma 已能讓程式用 AI 匯入 Cocos</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 每個機制版型都不同，排版仍以美術為主</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 下一個新機制直接套用整條流程
+• 跨專案沿用命名、字級、安全邊界規範</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #05 - 重點項目 2：額外押注 Ex_Bet 換皮 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">🎰 額外押注 Ex_Bet 換皮</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：謹丞</span>
+                    <span class="badge cat-spine">Spine / 換皮</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 60%;"></div></div>
+                <span class="progress-num">60%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 每款遊戲的「額外押注宣告」動畫都一樣，只是換圖
+• 手動在 Spine 裡逐張換散圖重複又容易漏</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 給範本＋新遊戲的散圖（框、光芒、三語文字），直接產出新 Spine 檔
+• 已用黃金帝國3 驗證，產出跟手做版完全一致</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 範本一改版，工具要跟著更新
+• 目前只做過一款，其他遊戲還在排隊</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 黃金帝國2、秦皇傳說PLUS 等待做的接著跑
+• 同類「只換圖」的 Spine 比照做成範本</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #05 - 重點項目 3：Notion 大檔上傳 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">📤 Notion 大檔上傳</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：孟孟</span>
+                    <span class="badge cat-3d">Workflow / 自動化</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                <span class="progress-num">100%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• Notion 網頁版傳大檔很慢、常卡住
+• 1.7GB 的檔案用瀏覽器傳 20 分鐘才 16%</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 同一個 1.7GB 檔案 4 分鐘傳完，大小核對一致
+• 可指定放在頁面的哪個位置，同名檔案會先擋下</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 無</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 補測 PSD／PSB
+• 外包發包表放原檔時直接改用這支</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #05 - 重點項目 4：講白話 eli5 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">04</div>
+                <div>
+                  <h3 class="project-title">💬 講白話（eli5）</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge cat-3d">溝通 / 輔助</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                <span class="progress-num">100%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• AI 回話常夾工程師用語，美術看不懂
+• 要轉述給組長、企劃、程式、外包時，每個人懂的程度不同</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 改寫自網路上的 ELI5，預設對象改成「美術組員」
+• 可指定講給組長／程式／企劃／外包聽
+• 組員問題區的提問與回答也套用這支的講法</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 要使用者主動叫出來，AI 不會每次自動切換</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 讓所有 SKILL 的回報都照這套講法</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #05 - 重點項目 5：MengMengTool -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">05</div>
+                <div>
+                  <h3 class="project-title">🧰 MengMengTool（Cocos 素材檢查）</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：孟孟</span>
+                    <span class="badge cat-ui">Cocos / 素材檢查</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                <span class="progress-num">80%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 在 Cocos Creator 裡一個一個點著檢查、修改素材太慢
+• 交件前常漏掉遺失的圖、沒用到的圖、命名錯誤</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 選一個 Creator 專案，13 個分頁一次檢查、批次修改
+• 直橫版變形警告、遺失／沒用到的圖、隱藏節點全開、Spine 第一幀、動態列表匯出
+• 會改檔的功能都能復原</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 復原只記得最近一次，大量修改前要先存檔上傳
+• 目前主要在孟孟自己的專案上長期使用</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 推廣給組員交件前固定跑一次
+• 換皮時整組 Prefab 連素材複製</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #05 - 重點項目 6：日備份工具 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">06</div>
+                <div>
+                  <h3 class="project-title">💾 日備份工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：小宇老師</span>
+                    <span class="badge cat-3d">Workflow / 備份</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 100%;"></div></div>
+                <span class="progress-num">100%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• PSD、Spine 工作檔存壞了、被舊檔蓋掉就救不回來
+• 想找回上週那一版沒有地方找</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 每天中午、晚上自動把有變動的檔案備到公電，每天的版本都留著
+• 每月跳一次整理視窗，由自己勾選要清掉哪些
+• 全組狀態總覽，看誰的備份停擺了
+• 可直接跟 Claude 說「找某個檔案之前的版本」</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 停在登入畫面不會備份（登入後會補）
+• 國定假日表每年要手動更新一次</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 全組都裝起來
+• 設定的保留天數真正套用到月度整理</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+        </div>
+
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🤝 跨部門 AI 技巧與經驗分享</span></h2>
+        </section>
+
+        <!-- ✏️ AI 技巧分享 01 -->
+        <article class="sharing-card">
+          <h3 class="sharing-title">💡 技巧 01：AI 遊戲字體風格延伸助手</h3>
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">SKILL</span>
+            <span class="badge-software">美術部</span>
+            <span class="badge-software">苡鳳學姊</span>
+          </div>
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">用途：拿一張做好的美術字當樣板，把同樣的質感套到別的字上。
+1. 給它一張風格圖（例如做好的「2.5X」金色立體字）＋一張或多張字形圖（例如「0123456789X,.」平面字）
+2. 字形照字形圖、字序不變，材質、顏色、倒角、厚度、光影照風格圖
+3. 專為數字字表設計：字與字之間自動留透明空隙，切字工具好切、不會黏在一起
+4. 字太多時自動拆成每張 3～4 個字分開生，避免一次生太多跑掉
+5. 背景透明，不會多加光芒粒子
+👉 適合：贏分數字、倍數字、跑分字表這類「同一套字要延伸出很多字」的工作</div>
+          </div>
+        </article>
+
+        <!-- ✏️ AI 技巧分享 02 -->
+        <article class="sharing-card">
+          <h3 class="sharing-title">💡 技巧 02：AI 遊戲素材角度延伸助手</h3>
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">SKILL</span>
+            <span class="badge-software">美術部</span>
+            <span class="badge-software">苡鳳學姊</span>
+          </div>
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">用途：拿一個素材的設計，生出它的各種角度，或替換掉場景裡的同類物件。它會自己判斷是哪種用法：
+1. 角度延伸：給一顆金幣（或寶石、寶箱）＋一張多角度姿勢表，照表轉到每個角度；例如 5 排 10 顆的旋轉序列，會自己拆成 10 組依序生
+2. 堆疊換款：給新款金幣＋一張舊金幣堆的場景圖，把場景裡的金幣全換成新款，構圖和光影保留原圖
+3. 附一支小程式，能把排整齊的角度表自動切成一格一格當參考（只切圖，不改原圖）
+👉 適合：金幣旋轉動畫、寶石多視角、幣堆換樣式</div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #04 (2026.09.22 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-04" class="issue-content-panel">
       
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">
