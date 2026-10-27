@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-05" selected>Issue #05 (2026.10.20)</option>
+        <option value="issue-06" selected>Issue #06 (2026.10.27)</option>
+        <option value="issue-05">Issue #05 (2026.10.20)</option>
         <option value="issue-04">Issue #04 (2026.09.22)</option>
         <option value="issue-03">Issue #03 (2026.09.14)</option>
         <option value="issue-02">Issue #02 (2026.09.08)</option>
@@ -39,9 +40,178 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #05 (2026.10.20 本週最新第 5 次週報) -->
+    <!-- 🌟 ISSUE #06 (2026.10.27 本週最新第 6 次週報) -->
     <!-- ======================================================================= -->
-    <div id="issue-05" class="issue-content-panel active">
+    <div id="issue-06" class="issue-content-panel active">
+
+      <!-- 週報標題與總體摘要區 -->
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #06 (2026-W44)</span>
+          </div>
+        </div>
+
+        <!-- ✏️ 週報主標題 (可直接修改) -->
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #06<br />AI 做 Spine 與場景透視驗證</h2>
+
+        <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
+        <p class="hero-desc">
+          本期盤點 10/20～10/27 新收進知識庫的 4 項重點：AI 做 Spine 系列、場景透視驗證、狂暴犀牛 Spine 製作歸檔，以及知識庫說明書精簡。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <!-- ✏️ Issue #06 - 重點項目 1：AI 做 Spine 系列 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">🦴 AI 做 Spine 系列</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：韋中</span>
+                    <span class="badge cat-spine">Spine / 動畫</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+                <span class="progress-num">85%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• Spine 動畫從規格、從 Unity 移植都要美術一根骨頭一根骨頭做
+• AI 直接改 Spine 檔，容易把美術調過的東西蓋掉</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 照規格做 Spine：給規格表、參考影片、分層圖，AI 從頭做出動畫和發光特效圖，並渲染預覽影片（輪盤案實測：5 段動畫、3 套皮膚）
+• Unity 動畫搬成 Spine：自動找出動畫在哪、被誰驅動，逐格轉成 Spine 3.8；Unity 字型也能轉成 Cocos 美術字（海馬戀人實測）
+• 關鍵幀精簡：密密麻麻的關鍵幀精簡成少量曲線，例如 102 個 → 27 個，畫面幾乎看不出差別，另存新檔不動原檔
+• AI 改 Spine 的規矩：動手前先確認 Spine 沒開著、檔案沒被別人改過、先備份，避免蓋掉美術的修改</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 轉出來的新檔，原本「不匯出」的圖要美術手動重新取消勾選
+• 3D 模型、粒子本體搬不過來，要在引擎重做</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 更多機台實測
+• 美術調好的檔案能直接接著讓 AI 改</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #06 - 重點項目 2：場景透視驗證 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">📐 場景透視驗證</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：志偉／孟孟</span>
+                    <span class="badge cat-3d">場景 / 3D 驗證</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 50%;"></div></div>
+                <span class="progress-num">50%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• AI 生圖、原畫、外包回稿的場景，透視對不對、東西大小合不合理，用眼睛看很難判斷
+• 五靈召龍要求場景能照遊戲鏡頭建得出來</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 把場景圖放進 Blender，攝影機照遊戲正式鏡頭擺好，畫出地板網格
+• 照圖用方塊框出每樣東西，算出多遠、多高；高度跟現實不合理的會標紅
+• 產出網格疊圖、輪廓疊圖、閃爍比對，直接打開 Blender 給人看
+• 五靈召龍場景規範統一鏡頭參數，驗收定為「在 3D 裡建得出場景才算過」</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 目前只建了五靈召龍的鏡頭，新專案要先從 MAX 讀出鏡頭數值
+• 每樣東西的位置要逐一量，圖越複雜越花時間</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 其他專案的鏡頭陸續加進來
+• 外包回稿交件前固定驗一次</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #06 - 重點項目 3：狂暴犀牛 Spine 製作歸檔 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">🦏 狂暴犀牛 Spine 製作歸檔</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：yenpeng</span>
+                    <span class="badge cat-spine">Spine / 歸檔</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                <span class="progress-num">80%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• Spine 改好後要重新輸出、壓縮、同步到共享資料夾，步驟多又容易漏
+• 散圖、Spine、靜態圖三邊尺寸對不齊</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 以靜態圖為對位基準，讓 Spine 的顯示尺寸跟靜態圖對齊
+• 「重新輸出」跟「重新製作」分開，只輸出時不動骨架、動畫和美術
+• 輸出的圖照指定設定無損壓縮，逐點確認畫面沒變
+• SKEL、ATLAS、圖片成套同步到 export 資料夾，同步後自動比對兩邊是否一致</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 目前是狂暴犀牛專用，換專案要另外設定路徑和交付格式</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 整理成其他機台也能套用的通用版</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #06 - 重點項目 4：知識庫說明書精簡 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">04</div>
+                <div>
+                  <h3 class="project-title">📚 知識庫說明書精簡</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge cat-3d">知識庫 / 共享</span>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                <span class="progress-num">80%</span>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 工具一直改版，說明書沒跟上，AI 照舊說明教人會教錯
+• 很多說明書是代寫的，工具負責人不敢改別人寫的說明</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 10/20 一天精簡 46 份說明書，分五批完成（例：外包發包表 198 行 → 83 行）
+• 統一成五段：解決什麼、快速開始、要準備什麼、會踩到的雷、什麼時候不用
+• 操作步驟和參數回到工具本身的說明，工具改版時說明書大多不用跟著改
+• 知識庫體檢新增提醒：工具改了、說明沒跟上會被抓出來</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 代寫的說明書還沒全部交還給工具負責人</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 請負責人接手自己工具的說明書，之後改工具時自己更新
+• 新工具上架一律照五段寫</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+        </div>
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #05 (2026.10.20 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-05" class="issue-content-panel">
 
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">
