@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-06" selected>Issue #06 (2026.10.27)</option>
+        <option value="issue-07" selected>Issue #07 (2026.11.03)</option>
+        <option value="issue-06">Issue #06 (2026.10.27)</option>
         <option value="issue-05">Issue #05 (2026.10.20)</option>
         <option value="issue-04">Issue #04 (2026.09.22)</option>
         <option value="issue-03">Issue #03 (2026.09.14)</option>
@@ -40,9 +41,188 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #06 (2026.10.27 本週最新第 6 次週報) -->
+    <!-- 🌟 ISSUE #07 (2026.11.03 本週最新第 7 次週報) -->
     <!-- ======================================================================= -->
-    <div id="issue-06" class="issue-content-panel active">
+    <div id="issue-07" class="issue-content-panel active">
+
+      <!-- 週報標題與總體摘要區 -->
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #07 (2026-W45)</span>
+          </div>
+        </div>
+
+        <!-- ✏️ 週報主標題 (可直接修改) -->
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #07<br />特效工具上架與出圖把關</h2>
+
+        <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
+        <p class="hero-desc">
+          本期盤點 10/27～11/3 新收進知識庫的 5 項重點：Effekseer 闇影特效工具、CocosStudio 轉 Creator、出圖與包體優化流程（檢查 → 壓縮 → 上傳）、神燈編輯器與 JR 圖片壓縮工具。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <!-- ✏️ Issue #07 - 重點項目 1：Effekseer 闇影特效工具 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">✨ Effekseer 闇影特效工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：竑德</span>
+                    <span class="badge cat-ui">特效 / Effekseer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• Effekseer 特效節點多、規則細，猜錯常常「不報錯但畫面不動」
+• 手上的特效素材檔名看不出是什麼，找素材很花時間</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 一整套 6 支：新手教學、用 AI 做或改特效、交出去前先驗收、建特效素材庫、替素材圖補描述、整理個人特效風格
+• 做新特效時先從自己的素材庫挑圖，照自己的風格規則做，做出來才像組內作品
+• 程式放公電，第一次用會自動裝到自己電腦
+• 舊的「Effekseer 材質產生器」同時退場，由這套取代</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 第一次要先建素材庫、整理風格，前置作業較多
+• 材質、特效的規則很細，靜默失敗還是要靠驗收那支把關</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 組內特效作品陸續收進素材庫
+• 把做好的特效移植到 Cocos</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #07 - 重點項目 2：CocosStudio 轉 Creator -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">🔄 CocosStudio 轉 Creator</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：彭雁</span>
+                    <span class="badge cat-spine">Cocos / 轉檔</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 舊遊戲要從 CocosStudio 搬到 Creator 3.8.5，手動重建場景、貼圖、字型、Spine 非常耗時</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 給 .ccs 檔，自動轉出場景、貼圖、點陣字、Spine，也有雙擊開的視窗版
+• 做好的 3D 角色可以一起帶進去，並附 3D 角色接材質的流程
+• 已轉過 MonkeyKing、TKThreeHeroes、DongZhuo（含 3D）、ThreeFates 四款</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• CocosStudio 裡的 3D 模型轉不回來，要用另外做好的 3D 角色
+• 需要先安裝 CocosStudio 資源工具和 Creator 3.8.5</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 更多舊遊戲照這套轉
+• 轉完直接放進遊戲專案驗收</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #07 - 重點項目 3：出圖與包體優化流程 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">📦 出圖與包體優化流程</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：均楷／小宇老師</span>
+                    <span class="badge cat-3d">出圖 / 包體優化</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 出圖寬高是奇數，進遊戲常出問題，用眼睛很難一張張查
+• 遊戲包體太大，想壓 8bit 又不知道哪些圖會掉細節
+• 出完圖要手動複製到上傳區，常漏傳或傳到舊圖</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• ① 檢查：給平台資料夾，一次查完寬高是不是偶數，奇數附修法；PNG 另存 8bit 版產對照圖，依細節損失排序（出圖品質把關）
+• ② 壓縮：整個資料夾轉成真正的 8bit，保留尺寸與透明背景，原圖先備份；沒透明的背景可另存 JPG，附三版對照圖（PNG 批次轉 8bit）
+• ③ 上傳：常駐排程把滿貫營運需求的新圖、改版圖自動同步到 rd2 上傳區，被人手動改過的不會蓋掉（滿貫 PNG 自動同步）
+• 三步都不動原檔</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 8bit 最多 256 色，人物皮膚、大面積漸層會出現顆粒，要不要用仍要美術看對照圖判斷
+• 自動上傳目前只裝在均楷的電腦，別人要用要先改路徑再裝</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 交件前固定跑「檢查 → 壓縮 → 上傳」一輪
+• 自動上傳整理成其他人也能套用的版本</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #07 - 重點項目 4：神燈編輯器（原快速換皮 SLOT 工具） -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">04</div>
+                <div>
+                  <h3 class="project-title">🧞 神燈編輯器（原快速換皮 SLOT 工具）</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：福順／兔兔</span>
+                    <span class="badge cat-spine">換皮 / 編輯器</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 換皮換圖後，要按 PLAY 湊條件才看得到演出，驗證很慢</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 在遊戲裡實際錄下演出，換圖的人不用開遊戲專案也能播放、換圖、新舊資源切換比對
+• 自動錄製、比對報告（標出新圖尺寸不對、Spine 少動畫）、可讓 Claude 直接操作
+• 11/2 改名「神燈編輯器」，新增「問題與解法」，安裝與權限要找誰都寫清楚</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 要開 GitHub 和共用資料夾權限才能用</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 研一合作換皮時用來驗證查不出來的問題
+• 說明改寫成最新版</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #07 - 重點項目 5：JR 圖片壓縮工具 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">05</div>
+                <div>
+                  <h3 class="project-title">🖼️ JR 圖片壓縮工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：昭仁／兔兔</span>
+                    <span class="badge cat-3d">出圖 / 壓縮</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 圖片要批次壓縮、縮尺寸，不想每次都經過 AI</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 公電上雙擊就能用，整個資料夾一次壓，可直接蓋掉原檔或另存
+• 中間有壓縮前後對照，看得到壓完的大小
+• 11/2 照截圖補齊用法，每個下拉選單選項的意思都寫清楚</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• WebP、RGBA4444 等格式最小，但遊戲不一定能吃，換格式前要先問程式</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 推廣給組員日常壓圖使用</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+        </div>
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #06 (2026.10.27 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-06" class="issue-content-panel">
 
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">
@@ -78,10 +258,6 @@
                   </div>
                 </div>
               </div>
-              <div class="progress-group">
-                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
-                <span class="progress-num">85%</span>
-              </div>
             </div>
             <div class="dimensions-grid">
               <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• Spine 動畫從規格、從 Unity 移植都要美術一根骨頭一根骨頭做
@@ -113,10 +289,6 @@
                   </div>
                 </div>
               </div>
-              <div class="progress-group">
-                <div class="progress-track"><div class="progress-fill" style="width: 50%;"></div></div>
-                <span class="progress-num">50%</span>
-              </div>
             </div>
             <div class="dimensions-grid">
               <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• AI 生圖、原畫、外包回稿的場景，透視對不對、東西大小合不合理，用眼睛看很難判斷
@@ -143,14 +315,10 @@
                 <div>
                   <h3 class="project-title">🦏 狂暴犀牛 Spine 製作歸檔</h3>
                   <div class="project-badges">
-                    <span class="badge badge-dev">👤 開發者：yenpeng</span>
+                    <span class="badge badge-dev">👤 開發者：彭雁</span>
                     <span class="badge cat-spine">Spine / 歸檔</span>
                   </div>
                 </div>
-              </div>
-              <div class="progress-group">
-                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
-                <span class="progress-num">80%</span>
               </div>
             </div>
             <div class="dimensions-grid">
@@ -180,10 +348,6 @@
                     <span class="badge cat-3d">知識庫 / 共享</span>
                   </div>
                 </div>
-              </div>
-              <div class="progress-group">
-                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
-                <span class="progress-num">80%</span>
               </div>
             </div>
             <div class="dimensions-grid">
