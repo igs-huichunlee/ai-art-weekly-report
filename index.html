@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-07" selected>Issue #07 (2026.11.03)</option>
+        <option value="issue-08" selected>Issue #08 (2026.11.10)</option>
+        <option value="issue-07">Issue #07 (2026.11.03)</option>
         <option value="issue-06">Issue #06 (2026.10.27)</option>
         <option value="issue-05">Issue #05 (2026.10.20)</option>
         <option value="issue-04">Issue #04 (2026.09.22)</option>
@@ -41,9 +42,154 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #07 (2026.11.03 本週最新第 7 次週報) -->
+    <!-- 🌟 ISSUE #08 (2026.11.10 本週最新第 8 次週報) -->
     <!-- ======================================================================= -->
-    <div id="issue-07" class="issue-content-panel active">
+    <div id="issue-08" class="issue-content-panel active">
+
+      <!-- 週報標題與總體摘要區 -->
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #08 (2026-W46)</span>
+          </div>
+        </div>
+
+        <!-- ✏️ 週報主標題 (可直接修改) -->
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #08<br />Spine 驗收與換皮流程改版</h2>
+
+        <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
+        <p class="hero-desc">
+          本期盤點 11/2～11/10 知識庫的 3 項重點改版：Spine 比對工具、外包發包表填寫、SLOT 換皮流程，並分享美術部的 AI Spine 工具。有 SKILL 的工具都附上叫法，看完可以直接跟 Claude 說。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <!-- ✏️ Issue #08 - 重點項目 1：Spine 比對工具 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">🔍 Spine 比對工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔／孟孟</span>
+                    <span class="badge cat-spine">Spine / 驗收</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 外包交回的 Spine 常把程式要用的名稱改掉或弄丟，眼睛比對很難發現
+• 換皮新舊兩版要一支一支打開對照，很花時間</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 改成網頁：左舊右新所有動作並排視覺化播放
+• 新增多項比對功能
+• 發佈包放上公電，附操作示範影片</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 只能比兩包都有的 Spine，全新的動畫沒有舊版可以比</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 接上 Claude，比對出的問題自動修</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #08 - 重點項目 2：外包發包表填寫 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">📝 外包發包表填寫</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge cat-ui">Notion / 外包</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「幫我填外包發包表」（SKILL：<code>outsource-spec-table-filler</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 換皮新專案常複製舊的外包規格來改，舊的製作項目、提交、反饋要一筆筆清掉</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 新增「把文件整理清空」：製作項目、提交與反饋清成空白
+• 清完直接問新遊戲的 Spine 資料夾，接著把動效表填好
+• Spine 檔選項與分頁可以照新遊戲的資料夾增刪</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 無</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 換皮專案開卡時一次清空＋填好</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+          <!-- ✏️ Issue #08 - 重點項目 3：SLOT 換皮流程 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">🎰 SLOT 換皮流程</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：兔兔</span>
+                    <span class="badge cat-spine">老虎機 / 換皮</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「我要做換皮專案」（SKILL：<code>reskin-workflow</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 第一張 MG 盤面定案後，其他畫面和零件還要一張張做，每款都從頭摸索</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 帶著一步步做：MoodBoard → 角色 → AI 分析每張畫面 → 分組批量生成＋疊圖比對 → 人工調整</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• Magnific 工作流與一輪一輪改到定案的做法還在實驗中，要多跑幾款驗證</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 實驗中的做法驗證完轉正
+• 系列續作整理出固定做法</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+        </div>
+
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🤝 跨部門 AI 技巧與經驗分享</span></h2>
+        </section>
+
+        <!-- ✏️ AI 技巧分享 01 -->
+        <article class="sharing-card">
+          <h3 class="sharing-title">💡 美術部的 AI Spine 工具</h3>
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">美術部</span>
+            <span class="badge-software">AI小助理</span>
+            <span class="badge-software">阿練</span>
+          </div>
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">1. 可自動生成 Spine 動畫
+2. 電腦不需要安裝 Spine
+3. 一樣是用 Claude 或 Codex 操作
+4. 目前有對接研一規格，出專案就直接符合研一要的相關規定
+5. 研二也可以提需求，請阿練客製化</div>
+          </div>
+          <div class="example-frame-wrapper">
+            <div class="example-frame-label">🖼️ 美術部 AI 小助理：Claude Desktop 連線設定畫面</div>
+            <div class="media-box">
+              <img src="Issue %2308 (2026-W46)/AI小助理_AISpine.png" alt="美術部 AI 小助理連線設定畫面" style="width: 100%; display: block; object-fit: contain;">
+            </div>
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #07 (2026.11.03 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-07" class="issue-content-panel">
 
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">

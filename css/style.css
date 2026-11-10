@@ -931,3 +931,21 @@ footer {
   .hero-box { padding: 28px 24px; }
   .project-card { padding: 24px 20px; }
 }
+
+/* 🧩 SKILL 叫法（Issue #08 起） */
+.skill-call-row {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  line-height: 1.6;
+}
+.skill-call-row code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.82rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgba(74, 124, 110, 0.12);
+  border: 1px solid rgba(74, 124, 110, 0.28);
+  user-select: all;
+}
