@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="issue-08" selected>Issue #08 (2026.11.10)</option>
+        <option value="special-kb" selected>特刊：知識庫升級報告 (2026.11)</option>
+        <option value="issue-08">Issue #08 (2026.11.10)</option>
         <option value="issue-07">Issue #07 (2026.11.03)</option>
         <option value="issue-06">Issue #06 (2026.10.27)</option>
         <option value="issue-05">Issue #05 (2026.10.20)</option>
@@ -42,9 +43,308 @@
     </div>
 
     <!-- ======================================================================= -->
-    <!-- 🌟 ISSUE #08 (2026.11.10 本週最新第 8 次週報) -->
+    <!-- 🌟 特刊：知識庫升級報告 (2026.11) -->
     <!-- ======================================================================= -->
-    <div id="issue-08" class="issue-content-panel active">
+    <div id="special-kb" class="issue-content-panel active">
+
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">特刊：</span>
+            <span class="issue-badge-text">知識庫升級報告 (2026.11)</span>
+          </div>
+        </div>
+        <h2 class="hero-title">知識庫升級<br />各自的小工具，到全組共用的知識庫</h2>
+        <p class="hero-desc">
+          美術組 ArtWiki 從 2026 年 7 月開始，4 個月內由 10 個人一起維護。
+        </p>
+        <div class="kpi-row">
+          <div class="kpi-tile"><div class="kpi-num">4</div><div class="kpi-unit">個月</div></div>
+          <div class="kpi-tile"><div class="kpi-num">10</div><div class="kpi-unit">人一起維護</div></div>
+          <div class="kpi-tile"><div class="kpi-num">645</div><div class="kpi-unit">次更新上傳</div></div>
+          <div class="kpi-tile"><div class="kpi-num">77</div><div class="kpi-unit">支 skill</div></div>
+          <div class="kpi-tile"><div class="kpi-num">9</div><div class="kpi-unit">個自製輔助工具</div></div>
+          <div class="kpi-tile"><div class="kpi-num">272</div><div class="kpi-unit">份知識條目</div></div>
+        </div>
+      </section>
+
+      <main>
+        <!-- ✏️ 特刊 - 升級前後 -->
+        <div class="media-box-wrapper">
+          <div class="media-box">
+            <img src="特刊_知識庫升級報告/升級前後.png" alt="知識庫升級前後對照" style="width: 100%; display: block; object-fit: contain;">
+          </div>
+        </div>
+
+        <!-- ✏️ 特刊 - 方向 3：部門內跨組合作 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🤝 部門內跨組合作</span></h2>
+        </section>
+        <div class="media-box-wrapper special-video">
+          <div class="media-header-label">🎬 部門內跨組合作：介紹影片（製作中）</div>
+        </div>
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🧩 新機制 UI 產線</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 侑子</span>
+                    <span class="badge cat-ui">2D UI / 產線</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「我要做新機制 demo」（SKILL：<code>slot-mechanic-figma-pipeline</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 新活動機制企劃、美術、程式三方來回對版本</div></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ✏️ 特刊 - 方向 4：新能力 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>✨ 新能力</span></h2>
+        </section>
+        <div class="media-box-wrapper special-video">
+          <div class="media-header-label">🎬 新能力：介紹影片（製作中）</div>
+        </div>
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🦴 AI 做 Spine 系列</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 韋中／彭雁／小楊</span>
+                    <span class="badge cat-spine">Spine / 動畫</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「照這份規格做 Spine」（SKILL：<code>spine-from-spec</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• Spine 動畫從規格、從 Unity 移植都要一根骨頭一根骨頭做</div></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">✨ Effekseer 闇影特效工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 紅茶</span>
+                    <span class="badge cat-ui">特效 / Effekseer</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「教我用闇影」（SKILL：<code>efk-tutorial</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 特效節點多、規則細，猜錯常常「不報錯但畫面不動」</div></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🧰 MengMengTool（Cocos 素材檢查）</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 孟孟</span>
+                    <span class="badge cat-ui">Cocos / 素材檢查</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：雙擊知識庫裡的 <code>tools\MengMengTool\MengMengTool.bat</code></div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 在 Cocos Creator 裡一個一個點著檢查、修改素材太慢
+• 交件前常漏掉遺失的圖、沒用到的圖、命名錯誤</div></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ✏️ 特刊 - 方向 1：品質把關 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🛡️ 品質把關</span></h2>
+        </section>
+        <div class="media-box-wrapper special-video">
+          <div class="media-header-label">🎬 品質把關：介紹影片（製作中）</div>
+        </div>
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🎞️ Spine 動畫總覽</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 志偉</span>
+                    <span class="badge cat-spine">Spine / 串接前檢查</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「開 Spine 動畫總覽」（SKILL：<code>spine-anim-gallery</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 美術的銜接問題，常要等程式串接進遊戲後才發現</div></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🧞 神燈編輯器</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 福順／松瑋</span>
+                    <span class="badge cat-spine">換皮 / 編輯器</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：先在神燈裡〈接上 Claude〉，再跟 Claude 說「打開神燈的 989」</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 換圖後要開遊戲專案、湊條件才看得到演出</div></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ✏️ 特刊 - 方向 2：省時間 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>⏱️ 省時間</span></h2>
+        </section>
+        <div class="media-box-wrapper special-video">
+          <div class="media-header-label">🎬 省時間：介紹影片（製作中）</div>
+        </div>
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🎬 動畫反饋</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 兔兔</span>
+                    <span class="badge cat-spine">動畫 / 外包反饋</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「幫我看這支外包動畫，寫反饋」（SKILL：<code>animation-direction-feedback</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 外包交回的動畫要逐段看完、一條條寫反饋，很花時間
+• 意見只寫「不夠有力」「不夠順」，外包看不懂要改哪裡，來回好幾次</div></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🔄 CocosStudio 轉 Creator</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 彭雁</span>
+                    <span class="badge cat-spine">Cocos / 轉檔</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「幫我把這款轉成 Creator」（SKILL：<code>cocosstudio-to-creator</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 舊遊戲搬到 Creator 3.8.5，手動重建場景、貼圖、字型、Spine 很耗時</div></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div>
+                  <h3 class="project-title">🔍 Spine 比對工具</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 兔兔／孟孟</span>
+                    <span class="badge cat-spine">Spine / 驗收</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：到公電 <code>09-美術工具</code> 拿「Spine比對工具_發佈包」，解壓後雙擊就能用</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid dims-1">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 解決什麼問題</div><div class="dim-content">• 外包交回的 Spine 常把程式要用的名稱改掉或弄丟，肉眼很難發現</div></div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ✏️ 特刊 - 方向 5：跨部門交流 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🌐 跨部門交流</span></h2>
+        </section>
+        <div class="media-box-wrapper special-video">
+          <div class="media-header-label">🎬 跨部門交流：介紹影片（製作中）</div>
+        </div>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🏷️ 跨部門工具收納</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">別組做好的工具，收進知識庫就是全組都能用：
+• 研四的〈Spine 前後比對〉網頁 → 併進我們的 Spine 比對工具
+• 研四原作的神燈 → 研二程式接手改版，說明收進知識庫
+• 程式黃昭仁的 JR 圖片壓縮工具、JR3DViewer 編輯器 → 用法整理成知識條目
+• 美術部阿練的 AI Spine 工具 → 不用裝 Spine，用 Claude 或 Codex 就能生成 Spine 動畫，已對接研一規格
+• 研四的 cat（Mesh 動畫編輯器）→ 在瀏覽器把圖做成動畫、輸出 Spine，研二整理出發光做法收成 skill</div>
+          </div>
+        </article>
+
+
+
+        <!-- ✏️ 特刊 - 共同知識疊加 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>📚 共同知識疊加</span></h2>
+        </section>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🕳️ 踩過的坑</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">• 15 份軟體與工具的問題排解：Spine、Cocos Creator、Photoshop、3ds Max、Effekseer、神燈…
+• 遇到同樣的狀況先查，不用每個人都再踩一次</div>
+          </div>
+        </article>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🎰 研一規範</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">• 《研一 F1 SLOT 總則》：畫面尺寸、素材尺寸、換皮哪些不可動、配色與層次
+• 7 條退件換來的經驗：例如「同一個東西被退兩次，先問原版」「角色跟背景不搭，先查透視」
+• 7 款換皮機台的定案紀錄：招財金牛、金象財神、雷霆金幣、3雷霆金幣、熔岩爆發、狂暴犀牛、烈焰神龍</div>
+          </div>
+        </article>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🛠️ 研二規範</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">• SLOT 專案合作 SOP、魚機 3D 角色 SOP、SLOT 玩法積木、開工單規範
+• 滿貫大亨 11 份規範：UI 規格總表、排版檢查表、新機制 UI 規範…
+• 場景製作規範：五靈召龍、獵龍3 獨角獸
+• 4 份檢核表導讀，正本每天從 Notion 自動同步</div>
+          </div>
+        </article>
+        <!-- ✏️ 特刊 - 未來目標 -->
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🎯 未來目標</span></h2>
+        </section>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🧭 完善工作流</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">• 每一步都有固定做法，誰來做都一樣好</div>
+          </div>
+        </article>
+        <article class="sharing-card">
+          <h3 class="sharing-title">🔗 自動化跨組協作</h3>
+          <div class="sharing-desc-box">
+            <div class="sharing-bullets">• 交接不靠口頭，資料自己走到下一站</div>
+          </div>
+        </article>
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
+    <!-- 📜 ISSUE #08 (2026.11.10 歷史紀錄) -->
+    <!-- ======================================================================= -->
+    <div id="issue-08" class="issue-content-panel">
 
       <!-- 週報標題與總體摘要區 -->
       <section class="hero-box">
