@@ -949,3 +949,14 @@ footer {
   border: 1px solid rgba(74, 124, 110, 0.28);
   user-select: all;
 }
+
+/* 特刊：知識庫升級報告 */
+.kpi-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.kpi-tile { flex: 1 1 110px; background: #fff; border-radius: 14px; padding: 12px 10px; text-align: center; border-top: 5px solid var(--accent-matcha); box-shadow: var(--shadow-soft); }
+.kpi-num { font-size: 2rem; font-weight: 900; line-height: 1.1; color: var(--text-main); }
+.kpi-unit { font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-top: 2px; }
+.special-lead { margin-top: 8px; font-size: 0.95rem; color: var(--text-muted); }
+.special-video { margin-bottom: 22px; }
+.dims-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .dims-3 { grid-template-columns: 1fr; } }
+.dims-1 { grid-template-columns: 1fr; }
