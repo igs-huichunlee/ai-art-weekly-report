@@ -30,7 +30,8 @@
     <div class="issue-tab-bar">
       <label for="issueSelect" class="tab-label">週報期數：</label>
       <select id="issueSelect" class="select-dropdown" onchange="switchIssueDropdown(this.value)">
-        <option value="special-kb" selected>特刊：知識庫升級報告 (2026.11)</option>
+        <option value="issue-09" selected>Issue #09 (2026.11.17)</option>
+        <option value="special-kb">特刊：知識庫升級報告 (2026.11)</option>
         <option value="issue-08">Issue #08 (2026.11.10)</option>
         <option value="issue-07">Issue #07 (2026.11.03)</option>
         <option value="issue-06">Issue #06 (2026.10.27)</option>
@@ -43,9 +44,138 @@
     </div>
 
     <!-- ======================================================================= -->
+    <!-- 🌟 ISSUE #09 (2026.11.17 本週最新第 9 次週報) -->
+    <!-- ======================================================================= -->
+    <div id="issue-09" class="issue-content-panel active">
+
+      <section class="hero-box">
+        <div class="hero-meta">
+          <div class="issue-selector">
+            <span class="issue-label">週別：</span>
+            <span class="issue-badge-text">Issue #09 (2026-W47)</span>
+          </div>
+        </div>
+
+        <!-- ✏️ 週報主標題 (可直接修改) -->
+        <h2 class="hero-title">AI 美術 Agent 週報 Issue #09<br />找檔、還原、交件一次到位</h2>
+
+        <!-- ✏️ 週報總體摘要說明 (可直接修改) -->
+        <p class="hero-desc">
+          本期盤點 11/9～11/17 新收進知識庫的 3 項重點：PSD 數字轉點陣字、新機台素材給營運、AI 回報驗收抽查。有 SKILL 的工具都附上叫法，看完可以直接跟 Claude 說。
+        </p>
+      </section>
+
+      <main>
+        <div class="projects-list">
+
+          <!-- ✏️ Issue #09 - 重點項目 1：PSD 數字轉點陣字 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">01</div>
+                <div>
+                  <h3 class="project-title">🔢 PSD 數字轉點陣字</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：彭雁</span>
+                    <span class="badge cat-ui">UI / 點陣字</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「這組數字也做 FNT」（SKILL：<code>psd-bmfont-export</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• PSD 裡的數字要做成遊戲用的點陣字，缺字要一個個補、一個個輸出</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 照框選的圖層，複製原稿的文字圖層改字，補齊 0～9 和符號，效果跟原稿一樣
+• 自動輸出點陣字，最後排一行字跟原稿比對</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• Photoshop 要開著，原稿用到的字型也要裝在自己電腦上</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 贏分、倍數這類數字字表都照這套做</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+          <!-- ✏️ Issue #09 - 重點項目 2：新機台素材給營運 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">02</div>
+                <div>
+                  <h3 class="project-title">📦 新機台素材給營運</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：小宇老師</span>
+                    <span class="badge cat-3d">營運 / 素材</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「新機台素材給營運」（SKILL：<code>new-machine-ops-assets</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• 新機台上線前要給營運一包素材，每台資料夾命名都不一樣，要一層層翻</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 自動撈五類素材：宣傳圖、Symbol、畫面截圖、三平台 BN、展開檔
+• 列勾選表給人確認，拷貝後逐檔核對大小</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 來源檔的尺寸幾乎都跟規格不一樣，這支只交最接近的檔，不幫忙轉尺寸</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 每台上線前固定跑一次</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+          <!-- ✏️ Issue #09 - 重點項目 3：AI 回報驗收抽查 -->
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-title-group">
+                <div class="rank-badge">03</div>
+                <div>
+                  <h3 class="project-title">✅ AI 回報驗收抽查</h3>
+                  <div class="project-badges">
+                    <span class="badge badge-dev">👤 開發者：侑子</span>
+                    <span class="badge cat-3d">驗收 / 品質</span>
+                  </div>
+                  <div class="skill-call-row">🧩 怎麼叫：跟 Claude 說「他說修好了，可信嗎」（SKILL：<code>ai-claim-check</code>）</div>
+                </div>
+              </div>
+            </div>
+            <div class="dimensions-grid">
+              <div class="dim-box dim-reason"><div class="dim-title">💡 開發原因</div><div class="dim-content">• AI 或外包常說「已修好」「已完成」，實際上沒跑過、只改了一半</div></div>
+              <div class="dim-box dim-status"><div class="dim-title">🚀 目前狀態</div><div class="dim-content">• 用 6 條抽查逐項要證據：有沒有真的跑過、橫直版都驗了嗎、錯誤有沒有被藏起來……
+• 回報最前面留一行「已套用」，看得出有沒有被檢查過</div></div>
+              <div class="dim-box dim-bottleneck"><div class="dim-title">⚠️ 瓶頸</div><div class="dim-content">• 要使用者主動叫出來才會抽查</div></div>
+              <div class="dim-box dim-goals"><div class="dim-title">🎯 未來目標</div><div class="dim-content">• 交件、收外包前固定用一次</div></div>
+            </div>
+            <div class="media-box-wrapper">
+              <div class="media-header-label">🎬 成果展示（待補影片／截圖）</div>
+            </div>
+          </article>
+
+        </div>
+        <section class="sharing-section-title">
+          <h2 class="sharing-h2"><span>🤝 跨部門 AI 技巧與經驗分享</span></h2>
+        </section>
+
+        <!-- ✏️ AI 技巧分享 -->
+        <article class="sharing-card">
+          <h3 class="sharing-title">💡 如果 AI 規則越多反而變爛了</h3>
+          <div class="software-row">
+            <span class="software-label">🛠️ 使用軟體 / 工具：</span>
+            <span class="badge-software">組內程式分享</span>
+          </div>
+          <div class="sharing-desc-box">
+            <div class="sharing-desc-title">📝 技巧說明與應用亮點：</div>
+            <div class="sharing-bullets">1. 主動問他為什麼變爛
+2. AI自己提議要怎麼調整
+3. 由AI自己反思+優化
+4. 列入待辦事項區,利用下班或是假日的時間讓AI自己改善優化</div>
+          </div>
+        </article>
+      </main>
+
+    </div>
+
+
+    <!-- ======================================================================= -->
     <!-- 🌟 特刊：知識庫升級報告 (2026.11) -->
     <!-- ======================================================================= -->
-    <div id="special-kb" class="issue-content-panel active">
+    <div id="special-kb" class="issue-content-panel">
 
       <section class="hero-box">
         <div class="hero-meta">
